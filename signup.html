@@ -6,6 +6,7 @@
     <link rel="icon" href="images/fav.png" type="image/gif" sizes="16x16" />
     <link href="default.css" rel="stylesheet" type="text/css" media="all" />
     <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="form-validate.js"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -20,10 +21,10 @@
             </li>
             <li><a href="menu.html" accesskey="2" title="">Menu</a></li>
             <li><a href="special.html" accesskey="3" title="">Specials</a></li>
-            <li class="current_page_item">
+            <li>
               <a href="aboutme.html" accesskey="4" title="">Contact Us</a>
             </li>
-            <li><a href="signup.html" accesskey="5" title="">Newsletter</a></li>
+            <li class="current_page_item"><a href="signup.html" accesskey="5" title="">Newsletter</a></li>
           </ul>
         </div>
       </div>
@@ -31,20 +32,49 @@
         <div id="content">
           <div class="article borders">
             <div class="title">
-              <h2>Contact Us</h2>
+              <h2>Newsletter SignUp Us</h2>
               <span class="byline"
-                >Our new branch: Willows Shopping Centre</span
+                >Sign Up now for receive weekly discounts from our shops! </span
               >
             </div>
-            <span class="image image-full"
-              ><img src="images/abt.jpg" alt=""
-            /></span>
-            <p>
-              Break news for our dear customers: We are opening a new branch,
-              located in <strong>Willows Shopping Centre</strong>, our baker is
-              an artisan-baker and was trained in Paris. We believe you will be
-              satisfied with his cakes.
-            </p>
+            <div class="main-block">
+              <div class="left-part">
+                <i class="fas fa-envelope"></i>
+                <i class="fas fa-at"></i>
+                <i class="fas fa-mail-bulk"></i>
+              </div>
+              <form method="GET" onsubmit="return validateForm()">
+                <h1>Please fill your information</h1>
+                <div class="info">
+                  <p>Name</p>
+                  <input
+                    class="fname"
+                    type="text"
+                    name="username"
+                    id="username"
+                    autocomplete="off"
+                    placeholder="Full name"
+                  />
+                  <p>Email</p>
+                  <input type="email" name="name" id="email" autocomplete="off" placeholder="Email" />
+                  <p>Product Interests</p>
+                  <select name="name" id="product">
+                    <option value="Cakes">Cakes</option>
+                    <option value="Birthday">Birthday Cakes</option>
+                    <option value="Burgers">Burgers</option>
+                    <option value="Tarts">Tarts</option>
+                  </select>
+                  <p>Birthday</p>
+                  <input type="date" name="name" id="birthday" placeholder="Birthday" />
+                </div>
+                <p>Message</p>
+                <div>
+                  <textarea rows="4"></textarea>
+                </div>
+
+                <button type="submit" value="Sign Up">Submit</button>
+              </form>
+            </div>
           </div>
         </div>
         <div id="sidebar">
